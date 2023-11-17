@@ -16,6 +16,7 @@ import { TitleComponent } from './components/title/title.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
+import { TextFileComponent } from './components/text-file/text-file.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
     NavbarComponent,
     AddFileComponent,
     TitleComponent,
+    TextFileComponent,
   ],
   imports: [
     BrowserModule,

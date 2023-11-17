@@ -1,0 +1,35 @@
+.card {
+    border: 1px solid #E9D4E9;
+    border-radius: 30px;
+    margin-bottom: 3px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 80vw;
+}
+
+.card-title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.card-text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.accuracy-label {
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #800080;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
