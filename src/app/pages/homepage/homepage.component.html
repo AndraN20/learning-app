@@ -1,8 +1,9 @@
 <div class="container">
-  <app-title title="Choose a file to learn"></app-title>
+    <app-title title="Choose a file to learn"></app-title>
+    <app-filter-button></app-filter-button>
+
     <div class="text-file-container">
         <app-text-file *ngFor="let item of data">
         </app-text-file>
     </div>
-    <app-filter-button></app-filter-button>
 </div>
