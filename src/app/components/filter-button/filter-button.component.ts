@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter-button.component.css']
 })
 export class FilterButtonComponent {
-
+  status = false;
+  changeStatus(): void {
+    this.status = !this.status;
+  }
 }

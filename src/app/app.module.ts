@@ -16,8 +16,8 @@ import { TitleComponent } from './components/title/title.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
 import { TextFileComponent } from './components/text-file/text-file.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { FilterButtonComponent } from './components/filter-button/filter-button.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { FilterButtonComponent } from './components/filter-button/filter-button.
     AddFileComponent,
     TitleComponent,
     FilterButtonComponent,
-    TextFileComponent,
+    TextFileComponent
   ],
   imports: [
     BrowserModule,
