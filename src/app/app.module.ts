@@ -12,6 +12,8 @@ import { FlashCardsComponent } from './pages/flash-cards/flash-cards.component';
 import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice.component';
 import { QuestionComponent } from './pages/question/question.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
 
 @NgModule({
   declarations: [
@@ -29,8 +31,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    AngularSvgIconModule.forRoot()
   ],
-  providers: [],
+  providers: [provideAngularSvgIcon()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
