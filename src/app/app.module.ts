@@ -13,10 +13,11 @@ import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice
 import { QuestionComponent } from './pages/question/question.component';
 import { AddFileComponent } from './pages/add-file/add-file.component';
 import { TitleComponent } from './components/title/title.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
 import { TextFileComponent } from './components/text-file/text-file.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FilterButtonComponent } from './components/filter-button/filter-button.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { TextFileComponent } from './components/text-file/text-file.component';
     NavbarComponent,
     AddFileComponent,
     TitleComponent,
+    FilterButtonComponent,
     TextFileComponent,
   ],
   imports: [
@@ -43,4 +45,4 @@ import { TextFileComponent } from './components/text-file/text-file.component';
   providers: [provideAngularSvgIcon()],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
