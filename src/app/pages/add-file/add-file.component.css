@@ -1,0 +1,23 @@
+.form-add-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.input-title {
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  color: black;
+  margin-top: 2rem;
+}
+
+.input-text {
+  font-size: 16px;
+  border: none;
+  width: 90vw;
+  margin-top: 2rem;
+}

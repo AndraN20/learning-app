@@ -12,7 +12,7 @@ import { FlashCardsComponent } from './pages/flash-cards/flash-cards.component';
 import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice.component';
 import { QuestionComponent } from './pages/question/question.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { MatIconModule } from '@angular/material/icon';
+import { AddFileComponent } from './pages/add-file/add-file.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +25,11 @@ import { MatIconModule } from '@angular/material/icon';
     FlashCardsComponent,
     MultipleChoiceComponent,
     QuestionComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddFileComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatIconModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

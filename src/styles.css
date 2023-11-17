@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.btn {
+  width: 80vw;
+  height: 50px;
+  border: none;
+  background-color: #800080;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  position: fixed;
+  bottom: 3rem;
+}
