@@ -1,0 +1,15 @@
+.custom-footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.icon-container {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.icon-container i {
+    margin: 0 10px;
+}

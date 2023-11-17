@@ -12,6 +12,7 @@ import { FlashCardsComponent } from './pages/flash-cards/flash-cards.component';
 import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice.component';
 import { QuestionComponent } from './pages/question/question.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
