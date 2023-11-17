@@ -13,6 +13,7 @@ import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice
 import { QuestionComponent } from './pages/question/question.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddFileComponent } from './pages/add-file/add-file.component';
+import { TitleComponent } from './components/title/title.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AddFileComponent } from './pages/add-file/add-file.component';
     QuestionComponent,
     NavbarComponent,
     AddFileComponent,
+    TitleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
