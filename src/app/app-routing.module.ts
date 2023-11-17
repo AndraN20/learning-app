@@ -9,6 +9,7 @@ import { FillTheBlanksComponent } from './pages/fill-the-blanks/fill-the-blanks.
 import { FlashCardsComponent } from './pages/flash-cards/flash-cards.component';
 import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice.component';
 import { QuestionComponent } from './pages/question/question.component';
+import { AddFileComponent } from './pages/add-file/add-file.component';
 
 const routes: Routes = [
   { path: '', redirectTo: PATHS.HOMEPAGE, pathMatch: 'full' },
@@ -19,11 +20,12 @@ const routes: Routes = [
   { component: FillTheBlanksComponent, path: PATHS.FILLTHEBLANKS },
   { component: FlashCardsComponent, path: PATHS.FLASHCARDS },
   { component: MultipleChoiceComponent, path: PATHS.MULTIPLECHOICE },
-  { component: QuestionComponent, path: PATHS.QUESTION }
+  { component: QuestionComponent, path: PATHS.QUESTION },
+  { component: AddFileComponent, path: PATHS.ADDFILE },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

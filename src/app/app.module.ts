@@ -11,7 +11,11 @@ import { FillTheBlanksComponent } from './pages/fill-the-blanks/fill-the-blanks.
 import { FlashCardsComponent } from './pages/flash-cards/flash-cards.component';
 import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice.component';
 import { QuestionComponent } from './pages/question/question.component';
+import { AddFileComponent } from './pages/add-file/add-file.component';
 import { TitleComponent } from './components/title/title.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FilterButtonComponent } from './components/filter-button/filter-button.component';
 
@@ -27,15 +31,17 @@ import { FilterButtonComponent } from './components/filter-button/filter-button.
     MultipleChoiceComponent,
     QuestionComponent,
     NavbarComponent,
-    TitleComponent,
+    AddFileComponent,
+    TitleComponent, ,
     FilterButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule,
+    AngularSvgIconModule.forRoot(),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [provideAngularSvgIcon()],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
