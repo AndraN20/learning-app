@@ -11,6 +11,7 @@ import { FillTheBlanksComponent } from './pages/fill-the-blanks/fill-the-blanks.
 import { FlashCardsComponent } from './pages/flash-cards/flash-cards.component';
 import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice.component';
 import { QuestionComponent } from './pages/question/question.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { QuestionComponent } from './pages/question/question.component';
     FillTheBlanksComponent,
     FlashCardsComponent,
     MultipleChoiceComponent,
-    QuestionComponent
+    QuestionComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
