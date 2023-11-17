@@ -24,11 +24,13 @@ import { TitleComponent } from './components/title/title.component';
     FlashCardsComponent,
     MultipleChoiceComponent,
     QuestionComponent,
+    NavbarComponent,
     TitleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

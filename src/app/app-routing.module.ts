@@ -11,14 +11,15 @@ import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice
 import { QuestionComponent } from './pages/question/question.component';
 
 const routes: Routes = [
-  { path: PATHS.HOMEPAGE, component: HomepageComponent },
-  { path: PATHS.SETTINGS, component: SettingsComponent },
-  { path: PATHS.STATISTICS, component: StatisticsComponent },
-  { path: PATHS.CHOOSEMETHOD, component: ChooseMethodComponent },
-  { path: PATHS.FILLTHEBLANKS, component: FillTheBlanksComponent },
-  { path: PATHS.FLASHCARDS, component: FlashCardsComponent },
-  { path: PATHS.MULTIPLECHOICE, component: MultipleChoiceComponent },
-  { path: PATHS.QUESTION, component: QuestionComponent }
+  { path: '', redirectTo: PATHS.HOMEPAGE, pathMatch: 'full' },
+  { component: HomepageComponent, path: PATHS.HOMEPAGE },
+  { component: SettingsComponent, path: PATHS.SETTINGS },
+  { component: StatisticsComponent, path: PATHS.STATISTICS },
+  { component: ChooseMethodComponent, path: PATHS.CHOOSEMETHOD },
+  { component: FillTheBlanksComponent, path: PATHS.FILLTHEBLANKS },
+  { component: FlashCardsComponent, path: PATHS.FLASHCARDS },
+  { component: MultipleChoiceComponent, path: PATHS.MULTIPLECHOICE },
+  { component: QuestionComponent, path: PATHS.QUESTION }
 ];
 
 @NgModule({
