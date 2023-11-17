@@ -14,6 +14,9 @@ import { QuestionComponent } from './pages/question/question.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddFileComponent } from './pages/add-file/add-file.component';
 import { TitleComponent } from './components/title/title.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
 
 @NgModule({
   declarations: [
@@ -27,11 +30,24 @@ import { TitleComponent } from './components/title/title.component';
     MultipleChoiceComponent,
     QuestionComponent,
     NavbarComponent,
+<<<<<<< HEAD
     AddFileComponent,
     TitleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
+=======
+    TitleComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    AngularSvgIconModule.forRoot()
+  ],
+  providers: [provideAngularSvgIcon()],
+  bootstrap: [AppComponent]
+>>>>>>> 3b3067196be427622361474849aa46e00573eff2
 })
 export class AppModule {}

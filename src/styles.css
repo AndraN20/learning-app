@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
 .btn {
   width: 80vw;
   height: 50px;
@@ -10,4 +13,10 @@
   font-weight: 500;
   position: fixed;
   bottom: 3rem;
+}
+
+.btn-no-style {
+  background: none;
+  border: 0;
+  cursor: pointer;
 }
