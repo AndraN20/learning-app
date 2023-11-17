@@ -16,7 +16,6 @@ import { TitleComponent } from './components/title/title.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { FilterButtonComponent } from './components/filter-button/filter-button.component';
 
 @NgModule({
@@ -32,7 +31,7 @@ import { FilterButtonComponent } from './components/filter-button/filter-button.
     QuestionComponent,
     NavbarComponent,
     AddFileComponent,
-    TitleComponent, ,
+    TitleComponent,
     FilterButtonComponent
   ],
   imports: [
