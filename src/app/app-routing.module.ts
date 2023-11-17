@@ -11,6 +11,7 @@ import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice
 import { QuestionComponent } from './pages/question/question.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: PATHS.HOMEPAGE, pathMatch: 'full'},
   { component: HomepageComponent, path: PATHS.HOMEPAGE },
   { component: SettingsComponent, path: PATHS.SETTINGS },
   { component: StatisticsComponent, path: PATHS.STATISTICS },
