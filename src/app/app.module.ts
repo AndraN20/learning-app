@@ -11,7 +11,6 @@ import { FillTheBlanksComponent } from './pages/fill-the-blanks/fill-the-blanks.
 import { FlashCardsComponent } from './pages/flash-cards/flash-cards.component';
 import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice.component';
 import { QuestionComponent } from './pages/question/question.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddFileComponent } from './pages/add-file/add-file.component';
 import { TitleComponent } from './components/title/title.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -30,24 +29,16 @@ import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
     MultipleChoiceComponent,
     QuestionComponent,
     NavbarComponent,
-<<<<<<< HEAD
     AddFileComponent,
     TitleComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
-  bootstrap: [AppComponent],
-=======
-    TitleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularSvgIconModule.forRoot()
+    AngularSvgIconModule.forRoot(),
   ],
   providers: [provideAngularSvgIcon()],
-  bootstrap: [AppComponent]
->>>>>>> 3b3067196be427622361474849aa46e00573eff2
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
