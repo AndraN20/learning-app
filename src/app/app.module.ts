@@ -12,6 +12,8 @@ import { FlashCardsComponent } from './pages/flash-cards/flash-cards.component';
 import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice.component';
 import { QuestionComponent } from './pages/question/question.component';
 import { TitleComponent } from './components/title/title.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FilterButtonComponent } from './components/filter-button/filter-button.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,13 @@ import { TitleComponent } from './components/title/title.component';
     MultipleChoiceComponent,
     QuestionComponent,
     NavbarComponent,
-    TitleComponent
+    TitleComponent,
+    FilterButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
