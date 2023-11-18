@@ -21,6 +21,8 @@
 
 .card-text {
   font-size: 14px;
+  height: 2rem;
+  overflow: hidden;
 }
 
 .accuracy-label {

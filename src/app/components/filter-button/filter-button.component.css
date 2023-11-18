@@ -1,9 +1,7 @@
 .btn-filter {
-  position: fixed;
-  top: 95px;
   height: 60px;
-  width: 350px;
-  background-color: rgb(231, 231, 231);
+  width: 90vw;
+  background-color: rgb(237, 237, 237);
   border-radius: 50px;
   display: flex;
   flex-direction: row;
@@ -12,28 +10,30 @@
   z-index: 10;
 }
 .filler {
-  height: 60px;
+  height: 80px;
   width: 350px;
+}
+
+.p {
+  position: relative;
+  top: 5px;
+  z-index: 12;
+  color: grey;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .btn-filter-switch {
   height: 56px;
-  width: 175px;
-  z-index: 2;
-  background-color: white;
+  width: 45vw;
+  z-index: 11;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50px;
-  position: relative;
-  bottom: 58px;
-  left: 2px;
-}
-
-p {
-  position: relative;
-  top: 5px;
-  z-index: 3;
-  color: grey;
-  font-weight: 600;
-  font-size: 16px;
+  position: fixed;
+  left: 25px;
+  transform: translateY(-1px);
+  z-index: 11;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
 }
 
 .p-active {
@@ -41,5 +41,19 @@ p {
 }
 
 .btn-filter-switch-active {
-  left: 173px;
+  transform: translate(calc(100% - 6px), -1px);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
+.container {
+  position: fixed;
+  height: 80px;
+  width: 100vw;
+  left: 0;
+  top: 82px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
 }
