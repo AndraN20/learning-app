@@ -14,7 +14,7 @@
       ></svg-icon>
     </button>
 
-    <button class="btn-no-style" [routerLink]="paths.SETTINGS">
+    <button class="btn-no-style" [routerLink]="paths.STATISTICS">
       <svg-icon
         class="footer-icon statistics-icon"
         src="../../../assets/Statistics-Icon.svg"
@@ -26,7 +26,10 @@
 <div *ngIf="sideNavState" class="side-nav-container">
   <div class="side-nav">
     <p class="add-new-file">Add a New File</p>
-    <p class="description">You can paste the text you want to learn or insert it manually or you can upload a pdf.</p>
+    <p class="description">
+      You can paste the text you want to learn or insert it manually or you can
+      upload a pdf.
+    </p>
     <button class="btn text" (click)="redirectToTextAdd()">Text</button>
   </div>
 </div>
