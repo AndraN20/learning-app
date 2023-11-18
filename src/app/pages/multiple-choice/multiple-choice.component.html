@@ -1,9 +1,38 @@
-<div class="container"> 
-<app-title title="Choose the right answer" [icon]="'../../../assets/Expand_left.svg'" [enableGoBack]=true></app-title>
-<div class="multiple-choice">
-    
-</div>
-<div class="submit btn">
-    <p>Submit</p>
-</div>
+<div class="container">
+  <app-title
+    title="Choose the right answer"
+    [icon]="'../../../assets/Expand_left.svg'"
+    [enableGoBack]="true"
+  ></app-title>
+  <div class="quiz">
+    <form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
+      <div
+        *ngFor="let question of multiplechoice; let i = index"
+        class="question"
+      >
+        <p>{{ "Question " + (i + 1) + ": " + question.question }}</p>
+        <div
+          *ngFor="let option of question.answers; let j = index"
+          class="options"
+        >
+          <input
+            type="radio"
+            [id]="'q' + i + 'option' + j"
+            [value]="option.value"
+            [formControlName]="'question' + i"
+          />
+          <label
+            [for]="'q' + i + 'option' + j"
+            [ngClass]="{
+              correct: option.value,
+              incorrect: !option.value
+            }"
+          >
+            {{ option.sentence }}
+          </label>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </div>
