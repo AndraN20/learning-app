@@ -24,4 +24,8 @@ export class NavbarComponent {
   openSideNav(): void {
     this.sideNavState = !this.sideNavState;
   }
+
+  redirectToTextAdd(): void {
+    this.router.navigate(['add-file']);
+  }
 }
