@@ -33,10 +33,11 @@ export class OpenAIService {
     return this.http.post<any>(this.apiUrl, requestBody, { headers: headers });
   }
 
-  generateFillBlanksWords(fileName: string): Observable<any> {
+  generateFillBlanksWords(): Observable<any> {
+    const fileName = this.localStorageService.getCurrentFileName();
     const content = this.localStorageService.getFile(fileName);
 
-    const prompt = `You obey all my orders. get all the most meaningful and unique words from this context. Separate them with comma. Don't generate more text, only the words. ${content?.text}`;
+    const prompt = `You obey all my orders. get all the most meaningful words from this context, only three (3) words. Separate them with comma. Don't generate more text, only the words. ${content?.text}`;
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',

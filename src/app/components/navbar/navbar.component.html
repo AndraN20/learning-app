@@ -7,7 +7,7 @@
       ></svg-icon>
     </button>
 
-    <button class="btn-no-style" [routerLink]="paths.ADDFILE">
+    <button class="btn-no-style" (click)="openSideNav()">
       <svg-icon
         class="footer-icon"
         src="../../../assets/Add-icon.svg"
@@ -22,3 +22,12 @@
     </button>
   </div>
 </footer>
+
+<div *ngIf="sideNavState" class="side-nav-container">
+  <div class="side-nav">
+    <p class="add-new-file">Add a New File</p>
+    <p class="description">You can paste the text you want to learn or insert it manually or you can upload a pdf.</p>
+    <button class="btn text" (click)="redirectToTextAdd()">Text</button>
+    <button class="btn text purple-text">Select a DOCX</button>
+  </div>
+</div>
