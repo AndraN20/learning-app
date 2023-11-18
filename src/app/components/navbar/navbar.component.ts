@@ -9,6 +9,8 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class NavbarComponent {
   currentPath!: string;
+  sideNavState: boolean = false;
+
   constructor(private router: Router) {}
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
@@ -18,4 +20,8 @@ export class NavbarComponent {
     });
   }
   paths = PATHS;
+
+  openSideNav(): void {
+    this.sideNavState = !this.sideNavState;
+  }
 }
