@@ -1,0 +1,41 @@
+.card-text {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card {
+    border-radius: 18px;
+    background: #E9D4E9;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 30px;
+    margin-bottom: 10px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+}
+
+.card-title {
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.btn-method {
+    position: relative;
+    bottom: 0;
+    width: 130.445px;
+    height: 43.979px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.no-event {
+    cursor: auto;
+}

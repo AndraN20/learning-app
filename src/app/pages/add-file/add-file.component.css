@@ -12,7 +12,7 @@
   border: none;
   text-align: center;
   color: black;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .input-text {
@@ -20,4 +20,13 @@
   border: none;
   width: 90vw;
   margin-top: 2rem;
+  height: 70vh;
+}
+
+.input-text:focus {
+  outline: none;
+}
+
+.input-title:focus {
+  outline: none;
 }

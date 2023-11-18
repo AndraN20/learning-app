@@ -8,14 +8,17 @@ export class LocalStorageService {
   constructor() {}
 
   createFile(file: TextFile): void {
-    let fileNames: string[] = JSON.parse(localStorage.getItem('FILE_NAMES')!);
-    if (!fileNames) {
-      fileNames = [];
+    let fileNamesString: string | null = localStorage.getItem('FILE_NAMES');
+    let fileNames: string[] = [];
+
+    if (fileNamesString) {
+      fileNames = JSON.parse(fileNamesString);
     }
-    if (!fileNames.find((fileName) => fileName == file.name)) {
-      fileNames.push(file.name);
-      localStorage.setItem(file.name, file.text);
-    }
+
+    fileNames.push(file.name);
+    localStorage.setItem('FILE_NAMES', JSON.stringify(fileNames)); // Fix here
+
+    localStorage.setItem(file.name, file.text);
   }
 
   getFiles(): TextFile[] {

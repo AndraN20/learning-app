@@ -1,10 +1,21 @@
 h1 {
   color: black;
   height: 50px;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
   font-size: 24px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: fixed;
+}
+
+.placeholder {
+  width: 100vw;
+  height: 95px;
 }

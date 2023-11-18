@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-title',
@@ -7,4 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class TitleComponent {
   @Input() title!: string;
+  @Input() renderBackBtn: boolean = false;
+
+  constructor(private readonly _location: Location) {
+
+  }
+
+  goToPreviousUrl(): void {
+    this._location.back();
+  }
 }
