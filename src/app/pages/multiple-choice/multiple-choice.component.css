@@ -1,41 +1,19 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-
-
-}
-.question{
-    background-color: #E9D4E9;
-    width: 90vw;
-    text-wrap: wrap;
-    padding: 20px;
-    border-radius: 25px;
-    
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-#question{
-    font-weight: bold;
-    font-size: 18px;
+.quiz {
+  margin: 50px;
 }
 
-.answers{
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    justify-content: center;
-    margin: 20px;
+.correct {
+  color: green;
 }
 
-#answers{
-    position:relative;
-    left: 10px;
-  }
-
-.submit{
-    position: relative;
-    top: 15rem;
-    
+.incorrect {
+  color: red;
 }
