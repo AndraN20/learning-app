@@ -19,6 +19,7 @@ import { TextFileComponent } from './components/text-file/text-file.component';
 import { FilterButtonComponent } from './components/filter-button/filter-button.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ChooseMethodCardComponent } from './components/choose-method-card/choose-method-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,15 +37,16 @@ import { ChooseMethodCardComponent } from './components/choose-method-card/choos
     TitleComponent,
     FilterButtonComponent,
     TextFileComponent,
-    ChooseMethodCardComponent
+    ChooseMethodCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AngularSvgIconModule.forRoot(),
+    ReactiveFormsModule,
   ],
   providers: [provideAngularSvgIcon()],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

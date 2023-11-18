@@ -16,15 +16,14 @@ export class AddFileComponent {
     text: new FormControl('', [Validators.required, Validators.minLength(4)]),
   });
 
-  addNewFile() {
-    if (this.addTextForm.valid) {
-      const file: TextFile = {
-        name: this.addTextForm.get('name')!.value!,
-        text: this.addTextForm.get('text')!.value!,
-      };
-      console.log(file);
+  addNewFile(event: Event) {
+    event.preventDefault();
 
-      this.localStorageService.createFile(file);
-    }
+    const file: TextFile = {
+      name: this.addTextForm.get('name')!.value!,
+      text: this.addTextForm.get('text')!.value!,
+    };
+    this.localStorageService.createFile(file);
+    this.addTextForm.reset();
   }
 }

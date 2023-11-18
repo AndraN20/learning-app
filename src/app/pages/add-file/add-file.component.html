@@ -1,4 +1,4 @@
-<form formGroupName="addTextForm" class="form-add-text">
+<form [formGroup]="addTextForm" class="form-add-text">
   <input
     formControlName="name"
     type="text"
@@ -11,5 +11,5 @@
     class="input-text"
     placeholder="Write your text here..."
   ></textarea>
-  <button class="btn" (click)="addNewFile()">Save</button>
+  <button class="btn" (click)="addNewFile($event)">Save</button>
 </form>
