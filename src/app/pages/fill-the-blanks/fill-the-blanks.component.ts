@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OpenAIService } from 'src/app/services/openai.service';
 
 @Component({
   selector: 'app-fill-the-blanks',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./fill-the-blanks.component.css']
 })
 export class FillTheBlanksComponent {
-
+  constructor(private readonly openAIService: OpenAIService) {}
+  generateText(): void {
+    this.openAIService.generateText('salut').subscribe(result => {
+      console.log(result);
+    });
+  }
 }
