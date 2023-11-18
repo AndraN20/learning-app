@@ -1,1 +1,9 @@
-<p>choose-method works!</p>
+<app-title title="Choose a method"></app-title>
+<div class="method-container">
+    <app-choose-method-card [title]="fill_the_blanks_title" [description]="fill_the_blanks_description">
+    </app-choose-method-card>
+    <app-choose-method-card [title]="reorder_title" [description]="reorder_description">
+    </app-choose-method-card>
+    <app-choose-method-card [title]="right_answer_title" [description]="right_answer_description">
+    </app-choose-method-card>
+</div>

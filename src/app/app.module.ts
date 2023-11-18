@@ -18,6 +18,7 @@ import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
 import { TextFileComponent } from './components/text-file/text-file.component';
 import { FilterButtonComponent } from './components/filter-button/filter-button.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ChooseMethodCardComponent } from './components/choose-method-card/choose-method-card.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AddFileComponent,
     TitleComponent,
     FilterButtonComponent,
-    TextFileComponent
+    TextFileComponent,
+    ChooseMethodCardComponent
   ],
   imports: [
     BrowserModule,
