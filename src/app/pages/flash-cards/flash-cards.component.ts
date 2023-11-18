@@ -20,12 +20,10 @@ export class FlashCardsComponent implements OnInit {
   ngOnInit(): void {
     this.gptService.generateFlashCardsText().subscribe((response) => {
       this.questions = JSON.parse(response);
-      console.log(this.questions);
     });
   }
 
   revealAnswear(): void {
     this.rotated = !this.rotated;
-    console.log(this.rotated);
   }
 }

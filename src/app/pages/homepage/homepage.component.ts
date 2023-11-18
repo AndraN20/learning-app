@@ -27,7 +27,6 @@ export class HomepageComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentPath = this.router.url;
-        console.log('Current Path:', this.currentPath);
       }
     });
   }
@@ -39,7 +38,6 @@ export class HomepageComponent implements OnInit {
 
   toggleEditMode() {
     this.editMode = !this.editMode;
-    console.log(this.editMode);
   }
 
   refresh(): void {

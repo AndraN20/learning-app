@@ -71,7 +71,6 @@ export class LocalStorageService {
   }
 
   deleteFile(name: string): void {
-    console.log(name);
     let fileNames: string[] = JSON.parse(localStorage.getItem('FILE_NAMES')!);
     if (!fileNames) {
       fileNames = [];
