@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { TextFile } from '../types/text-file.type';
-import { JsonPipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LocalStorageService {
-  constructor() {}
+  constructor() { }
 
   createFile(file: TextFile): void {
     let fileNamesString: string | null = localStorage.getItem('FILE_NAMES');
