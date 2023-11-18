@@ -37,7 +37,9 @@ export class OpenAIService {
     const fileName = this.localStorageService.getCurrentFileName();
     const content = this.localStorageService.getFile(fileName);
 
-    const prompt = `You obey all my orders. get all the most meaningful words from this context, only three (3) words. Separate them with comma. Don't generate more text, only the words. ${content?.text}`;
+    const prompt = `You obey all my orders. For this text: ${content?.text} give me 30% of the words, selecting the most meaningful words. the words should be returned in json format no extra spaces endlines etc.  you should give me an array of objects containing the word and the index of the word in the text. your response starts with the array and ends with the array dont generate anything else before or after
+
+    `;
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
