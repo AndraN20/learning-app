@@ -33,4 +33,9 @@
     width: 130.445px;
     height: 43.979px;
     flex-shrink: 0;
+    cursor: pointer;
+}
+
+.no-event {
+    cursor: auto;
 }

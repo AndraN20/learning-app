@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PATHS } from 'src/app/constants/paths';
 
 @Component({
   selector: 'app-choose-method',
@@ -14,4 +15,6 @@ export class ChooseMethodComponent {
 
   right_answer_title: string = 'Choose the right answer';
   right_answer_description: string = `text`;
+
+  paths = PATHS;
 }
