@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!loading">
   <div
     class="flash-card"
     [ngClass]="rotated ? 'flash-card-rotated ' : ''"
@@ -11,5 +11,8 @@
       {{ card.answear }}
     </p>
   </div>
-  <button class="btn done">Done!</button>
+  <button class="btn done" (click)="createFlashCard()">Done!</button>
+</div>
+<div class="container-loading" *ngIf="loading">
+  <app-loading-spiner></app-loading-spiner>
 </div>

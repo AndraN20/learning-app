@@ -14,14 +14,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(208, 208, 208);
+  background-color: rgb(230, 230, 230);
   border-radius: 20px;
-  transition: 1s;
+  transition: 0.5s;
   box-shadow: 0 1px 6px 0;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.7s;
-  transition: transform 0.7s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
 
 .flash-card-rotated {
@@ -30,11 +30,12 @@
 }
 
 .rotated {
-  transition: all 0.65s;
+  transition: all 0.5s;
   opacity: 0;
 }
 
 p {
+  text-align: center;
   transition: all 0.65s;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -47,4 +48,12 @@ p {
 .done {
   position: relative;
   top: 15rem;
+}
+
+.container-loading {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
