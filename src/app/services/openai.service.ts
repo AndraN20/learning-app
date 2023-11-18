@@ -15,7 +15,7 @@ export class OpenAIService {
     modelName: string = 'gpt-3.5-turbo';
 
     constructor(private readonly http: HttpClient,
-                private readonly localStorageService: LocalStorageService) { }
+        private readonly localStorageService: LocalStorageService) { }
 
     generateText(prompt: string): Observable<any> {
         const headers = new HttpHeaders({
@@ -32,7 +32,27 @@ export class OpenAIService {
 
         return this.http.post<any>(this.apiUrl, requestBody, { headers: headers });
     }
-    
+
+    generateFillBlanksWords(fileName: string): Observable<any> {
+        const content = this.localStorageService.getFile(fileName);
+
+        const prompt = `You obey all my orders. get all the most meaningful and unique words from this context. Separate them with comma. Don't generate more text, only the words. ${content?.text}`;
+
+        const headers = new HttpHeaders({
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${this.apiKey}`
+        });
+
+        const requestBody = {
+            model: this.modelName,
+            messages: [
+                { role: 'system', content: prompt }
+            ]
+        };
+
+        return this.http.post<any>(this.apiUrl, requestBody, { headers: headers });
+    }
+
     generateFlashCardsText(fileName: string): Observable<any> {
         const content = this.localStorageService.getFile(fileName);
 
