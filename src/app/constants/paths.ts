@@ -7,5 +7,5 @@ export const PATHS = {
   FLASHCARDS: 'flash-cards',
   MULTIPLECHOICE: 'multiple-choice',
   QUESTION: 'question',
-  ADDFILE: 'add-file',
+  ADDFILE: 'add-file'
 };
