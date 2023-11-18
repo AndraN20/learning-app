@@ -1,2 +1,9 @@
 <app-title title="Fill the blanks" [icon]="'../../../assets/Expand_left.svg'" [enableGoBack]="true"></app-title>
-<button (click)="generateText()">test</button>
+<div *ngFor="let item of allWords;">
+    <div *ngIf="item == 'placeholder'; else normalText">
+        <input />
+    </div>
+    <ng-template #normalText>
+        {{ item }}
+    </ng-template>
+</div>
