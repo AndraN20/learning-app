@@ -4,8 +4,15 @@
       <h2 class="card-title">{{ file.name }}</h2>
       <p class="card-text">{{ file.text }}</p>
     </div>
-    <div class="accuracy-label">
+    <div
+      class="accuracy-label"
+      [ngClass]="editMode ? 'accuracy-label-off' : ''"
+    >
       {{ file.accuracy ? file.accuracy + "% Accuracy" : "New" }}
+    </div>
+    <div class="editMode" [ngClass]="editMode ? 'editModeOn' : ''">
+      <p>Edit</p>
+      <p (click)="deleteFile(file.name)">Delete</p>
     </div>
   </div>
 </button>

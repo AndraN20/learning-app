@@ -14,7 +14,6 @@ export class NavbarComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentPath = this.router.url;
-        console.log('Current Path:', this.currentPath);
       }
     });
   }

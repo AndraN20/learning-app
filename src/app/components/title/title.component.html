@@ -1,12 +1,23 @@
 <div class="container">
-    <button class="btn-no-style" *ngIf="enableGoBack; else goBackRef" (click)="goToPreviousUrl()">
-        <svg-icon [src]="icon"></svg-icon>
+  <button
+    class="btn-no-style"
+    *ngIf="enableGoBack; else goBackRef"
+    (click)="goToPreviousUrl()"
+  >
+    <svg-icon [src]="icon"></svg-icon>
+  </button>
+  <ng-template #goBackRef>
+    <button class="btn-no-style" (click)="redirectTo()">
+      <svg-icon [src]="icon"></svg-icon>
     </button>
-    <ng-template #goBackRef>
-        <button class="btn-no-style" (click)="redirectTo()">
-            <svg-icon [src]="icon"></svg-icon>
-        </button>
-    </ng-template>
-    <h1>{{ title }}</h1>
+  </ng-template>
+  <h1>{{ title }}</h1>
+  <button
+    class="btn-no-style"
+    *ngIf="currentPath == 'homepage'"
+    (click)="this.editMode.emit()"
+  >
+    <svg-icon src="../../../assets/create.svg"></svg-icon>
+  </button>
 </div>
 <div class="placeholder"></div>

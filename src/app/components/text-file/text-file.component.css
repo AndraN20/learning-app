@@ -35,3 +35,16 @@
   font-size: 14px;
   line-height: normal;
 }
+
+.editMode {
+  color: #800080;
+  display: none;
+}
+
+.editModeOn {
+  display: block;
+}
+
+.accuracy-label-off {
+  display: none;
+}

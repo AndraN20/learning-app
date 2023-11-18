@@ -14,6 +14,7 @@ export class FlashCardsComponent {
   };
 
   revealAnswear(): void {
-    this.rotated = true;
+    this.rotated = !this.rotated;
+    console.log(this.rotated);
   }
 }

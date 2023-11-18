@@ -1,10 +1,15 @@
 <div class="container">
   <div
     class="flash-card"
-    [ngClass]="rotated ? 'flash-card-rotated' : ''"
+    [ngClass]="rotated ? 'flash-card-rotated ' : ''"
     (click)="revealAnswear()"
   >
-    <p class="question">{{ card.question }}</p>
-    <!-- <p class="answear">{{ card.answear }}</p> -->
+    <p [ngClass]="rotated ? 'rotated' : ''" class="question">
+      {{ card.question }}
+    </p>
+    <p [ngClass]="rotated ? '' : 'rotated'" class="answear">
+      {{ card.answear }}
+    </p>
   </div>
+  <button class="btn done">Done!</button>
 </div>

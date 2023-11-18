@@ -4,19 +4,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .flash-card {
   width: 90vw;
-  height: 300px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: rgb(208, 208, 208);
   border-radius: 20px;
+  transition: 1s;
 }
 
 .flash-card-rotated {
-  transform: rotateX(180);
-  transition: all 1s;
+  transform: rotateX(180deg);
+  transition: 1s;
+}
+
+.rotated {
+  transition: all 0.65s;
+  opacity: 0;
+}
+
+p {
+  transition: all 0.65s;
+}
+
+.answear {
+  transform: rotateX(180deg);
+}
+.done {
+  position: relative;
+  top: 15rem;
 }

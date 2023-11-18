@@ -4,10 +4,17 @@
     [icon]="'../../../assets/Setting_line.svg'"
     [enableGoBack]="false"
     [route]="paths.SETTINGS"
+    (editMode)="toggleEditMode()"
   ></app-title>
-  <app-filter-button></app-filter-button>
+  <app-filter-button (switchToggled)="filterFiles()"></app-filter-button>
 
   <div class="text-file-container">
-    <app-text-file *ngFor="let file of files" [file]="file"> </app-text-file>
+    <app-text-file
+      *ngFor="let file of files"
+      [file]="file"
+      [editMode]="editMode"
+      (refresh)="refresh()"
+    >
+    </app-text-file>
   </div>
 </div>
