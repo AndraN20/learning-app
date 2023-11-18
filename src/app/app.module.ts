@@ -20,6 +20,7 @@ import { FilterButtonComponent } from './components/filter-button/filter-button.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ChooseMethodCardComponent } from './components/choose-method-card/choose-method-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoadingSpinerComponent } from './components/loading-spiner/loading-spiner.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FilterButtonComponent,
     TextFileComponent,
     ChooseMethodCardComponent,
+    LoadingSpinerComponent,
   ],
   imports: [
     BrowserModule,
