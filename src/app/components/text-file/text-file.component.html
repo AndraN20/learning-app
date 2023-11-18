@@ -4,6 +4,8 @@
       <h2 class="card-title">{{ file.name }}</h2>
       <p class="card-text">{{ file.text }}</p>
     </div>
-    <div class="accuracy-label">Accuracy</div>
+    <div class="accuracy-label">
+      {{ file.accuracy ? file.accuracy + "% Accuracy" : "New" }}
+    </div>
   </div>
 </button>

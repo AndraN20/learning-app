@@ -1,0 +1,22 @@
+.container {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flash-card {
+  width: 90vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(208, 208, 208);
+  border-radius: 20px;
+}
+
+.flash-card-rotated {
+  transform: rotateX(180);
+  transition: all 1s;
+}

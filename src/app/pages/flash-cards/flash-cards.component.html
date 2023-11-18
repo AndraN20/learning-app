@@ -1,1 +1,10 @@
-<p>flash-cards works!</p>
+<div class="container">
+  <div
+    class="flash-card"
+    [ngClass]="rotated ? 'flash-card-rotated' : ''"
+    (click)="revealAnswear()"
+  >
+    <p class="question">{{ card.question }}</p>
+    <!-- <p class="answear">{{ card.answear }}</p> -->
+  </div>
+</div>

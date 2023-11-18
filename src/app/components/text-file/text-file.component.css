@@ -21,13 +21,14 @@
 
 .card-text {
   font-size: 14px;
+  width: 14rem;
   height: 2rem;
   overflow: hidden;
 }
 
 .accuracy-label {
   position: relative;
-  top: 3rem;
+  top: 2rem;
   border-radius: 5px;
   padding: 5px 10px;
   color: #800080;
