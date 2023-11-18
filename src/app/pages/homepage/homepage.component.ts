@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PATHS } from 'src/app/constants/paths';
 
 @Component({
   selector: 'app-homepage',
@@ -6,7 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-  data = [
-    1, 2, 3, 4, 5, 6, 7
-  ]
+  paths = PATHS;
+  data = [1, 2, 3, 4];
 }

@@ -1,7 +1,12 @@
 <div class="container">
-    <button class="btn-no-style">
+    <button class="btn-no-style" *ngIf="enableGoBack; else goBackRef" (click)="goToPreviousUrl()">
         <svg-icon [src]="icon"></svg-icon>
     </button>
+    <ng-template #goBackRef>
+        <button class="btn-no-style" (click)="redirectTo()">
+            <svg-icon [src]="icon"></svg-icon>
+        </button>
+    </ng-template>
     <h1>{{ title }}</h1>
 </div>
 <div class="placeholder"></div>
