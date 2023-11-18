@@ -8,7 +8,7 @@ import { Location } from '@angular/common';
 })
 export class TitleComponent {
   @Input() title!: string;
-  @Input() renderBackBtn: boolean = false;
+  @Input() icon!: string;
 
   constructor(private readonly _location: Location) {
 
