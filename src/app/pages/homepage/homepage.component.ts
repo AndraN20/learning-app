@@ -39,5 +39,10 @@ export class HomepageComponent implements OnInit {
 
   toggleEditMode() {
     this.editMode = !this.editMode;
+    console.log(this.editMode);
+  }
+
+  refresh(): void {
+    this.files = this.localStorageService.getFiles(this.filter);
   }
 }
