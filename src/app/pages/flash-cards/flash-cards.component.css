@@ -17,6 +17,11 @@
   background-color: rgb(208, 208, 208);
   border-radius: 20px;
   transition: 1s;
+  box-shadow: 0 1px 6px 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
 }
 
 .flash-card-rotated {
@@ -31,11 +36,14 @@
 
 p {
   transition: all 0.65s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .answear {
   transform: rotateX(180deg);
 }
+
 .done {
   position: relative;
   top: 15rem;
