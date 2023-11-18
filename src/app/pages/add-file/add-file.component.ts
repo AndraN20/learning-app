@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { TextFile } from 'src/app/types/text-file.type';
+import { PATHS } from 'src/app/constants/paths';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-file',
@@ -9,7 +11,12 @@ import { TextFile } from 'src/app/types/text-file.type';
   styleUrls: ['./add-file.component.css'],
 })
 export class AddFileComponent {
-  constructor(private localStorageService: LocalStorageService) {}
+  paths = PATHS;
+
+  constructor(
+    private localStorageService: LocalStorageService,
+    private router: Router
+  ) {}
 
   addTextForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(4)]),
@@ -23,7 +30,10 @@ export class AddFileComponent {
       name: this.addTextForm.get('name')!.value!,
       text: this.addTextForm.get('text')!.value!,
     };
-    this.localStorageService.createFile(file);
-    this.addTextForm.reset();
+    if (this.addTextForm.valid) {
+      this.localStorageService.createFile(file);
+      this.addTextForm.reset();
+    }
+    this.router.navigate([this.paths.HOMEPAGE]);
   }
 }

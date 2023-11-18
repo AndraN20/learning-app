@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" *ngIf="currentPath !== '/add-file'">
   <div class="footer-content">
     <button class="btn-no-style" [routerLink]="paths.HOMEPAGE">
       <svg-icon

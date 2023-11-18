@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TextFile } from '../types/text-file.type';
+import { JsonPipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
@@ -16,9 +17,9 @@ export class LocalStorageService {
     }
 
     fileNames.push(file.name);
-    localStorage.setItem('FILE_NAMES', JSON.stringify(fileNames)); // Fix here
+    localStorage.setItem('FILE_NAMES', JSON.stringify(fileNames));
 
-    localStorage.setItem(file.name, file.text);
+    localStorage.setItem(file.name, JSON.stringify(file));
   }
 
   getFiles(): TextFile[] {
@@ -28,10 +29,7 @@ export class LocalStorageService {
     }
     const textFiles: TextFile[] = [];
     fileNames.forEach((name) => {
-      const textFile: TextFile = {
-        name: name,
-        text: localStorage.getItem(name)!,
-      };
+      const textFile: TextFile = JSON.parse(localStorage.getItem(name)!);
       textFiles.push(textFile);
     });
     return textFiles;
@@ -43,10 +41,7 @@ export class LocalStorageService {
       fileNames = [];
     }
     if (fileNames.find((fileName) => fileName == name)) {
-      const textFile: TextFile = {
-        name: name,
-        text: localStorage.getItem(name)!,
-      };
+      const textFile: TextFile = JSON.parse(localStorage.getItem(name)!);
       return textFile;
     }
     return null;
@@ -58,7 +53,7 @@ export class LocalStorageService {
       fileNames = [];
     }
     if (fileNames.find((fileName) => fileName == file.name)) {
-      localStorage.setItem(file.name, file.text);
+      localStorage.setItem(file.name, JSON.stringify(file));
     }
   }
 
