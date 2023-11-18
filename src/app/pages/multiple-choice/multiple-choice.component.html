@@ -5,34 +5,33 @@
     [enableGoBack]="true"
   ></app-title>
   <div class="quiz">
-    <form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
-      <div
-        *ngFor="let question of multiplechoice; let i = index"
-        class="question"
-      >
-        <p>{{ "Question " + (i + 1) + ": " + question.question }}</p>
-        <div
-          *ngFor="let option of question.answers; let j = index"
-          class="options"
-        >
+    <form [formGroup]="quizForm">
+      <div class="question">
+        <p>{{ question.question }}</p>
+        <div class="options" *ngFor="let i of numbers">
           <input
             type="radio"
-            [id]="'q' + i + 'option' + j"
-            [value]="option.value"
-            [formControlName]="'question' + i"
+            [id]="'answer' + i"
+            [value]="i"
+            [(ngModel)]="selectedAnswer"
+            [formControlName]="'answer' + i"
           />
           <label
-            [for]="'q' + i + 'option' + j"
-            [ngClass]="{
-              correct: option.value,
-              incorrect: !option.value
-            }"
+            [ngClass]="
+              submitted
+                ? question.answers[i].value
+                  ? 'correct'
+                  : 'incorrect'
+                : ''
+            "
           >
-            {{ option.sentence }}
+            {{ question.answers[i].sentence }}
           </label>
         </div>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" (click)="onSubmit()" class="btn btn-submit">
+        Submit
+      </button>
     </form>
   </div>
 </div>
