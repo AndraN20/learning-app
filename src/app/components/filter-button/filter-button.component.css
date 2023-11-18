@@ -15,3 +15,31 @@
   height: 60px;
   width: 350px;
 }
+
+.btn-filter-switch {
+  height: 56px;
+  width: 175px;
+  z-index: 2;
+  background-color: white;
+  border-radius: 50px;
+  position: relative;
+  bottom: 58px;
+  left: 2px;
+}
+
+p {
+  position: relative;
+  top: 5px;
+  z-index: 3;
+  color: grey;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.p-active {
+  color: #800080;
+}
+
+.btn-filter-switch-active {
+  left: 173px;
+}
