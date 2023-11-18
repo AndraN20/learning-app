@@ -5,7 +5,15 @@ import { TextFile } from '../types/text-file.type';
   providedIn: 'root',
 })
 export class LocalStorageService {
-  constructor() { }
+  constructor() {}
+
+  saveCurrentFileName(fileName: string): void {
+    localStorage.setItem('CURRENT_FILE', fileName);
+  }
+
+  getCurrentFileName(): string {
+    return localStorage.getItem('CURRENT_FILE')!;
+  }
 
   createFile(file: TextFile): void {
     let fileNamesString: string | null = localStorage.getItem('FILE_NAMES');

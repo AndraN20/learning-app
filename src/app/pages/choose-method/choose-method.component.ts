@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PATHS } from 'src/app/constants/paths';
 
 @Component({
   selector: 'app-choose-method',
   templateUrl: './choose-method.component.html',
-  styleUrls: ['./choose-method.component.css']
+  styleUrls: ['./choose-method.component.css'],
 })
 export class ChooseMethodComponent {
   fill_the_blanks_title: string = 'Fill the blanks';

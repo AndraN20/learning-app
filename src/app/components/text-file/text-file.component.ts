@@ -22,6 +22,7 @@ export class TextFileComponent {
   ) {}
 
   redirectToChooseMethod(): void {
+    this.localStorageService.saveCurrentFileName(this.file.name);
     this.router.navigate([PATHS.CHOOSEMETHOD]);
   }
 
