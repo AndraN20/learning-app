@@ -12,7 +12,11 @@
     </button>
   </ng-template>
   <h1>{{ title }}</h1>
-  <button class="btn-no-style" *ngIf="route == '/homepage'">
+  <button
+    class="btn-no-style"
+    *ngIf="currentPath == 'homepage'"
+    (click)="this.editMode.emit()"
+  >
     <svg-icon src="../../../assets/create.svg"></svg-icon>
   </button>
 </div>

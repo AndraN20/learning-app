@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { TextFile } from '../types/text-file.type';
-import { JsonPipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LocalStorageService {
-  constructor() {}
+  constructor() { }
 
   createFile(file: TextFile): void {
     let fileNamesString: string | null = localStorage.getItem('FILE_NAMES');
@@ -64,12 +63,13 @@ export class LocalStorageService {
   }
 
   deleteFile(name: string): void {
+    console.log(name);
     let fileNames: string[] = JSON.parse(localStorage.getItem('FILE_NAMES')!);
     if (!fileNames) {
       fileNames = [];
     }
-    if (fileNames.find((fileName) => fileName == name)) {
-      localStorage.removeItem(name);
-    }
+    fileNames = fileNames.filter((fileName) => fileName !== name);
+    localStorage.removeItem(name);
+    localStorage.setItem('FILE_NAMES', JSON.stringify(fileNames));
   }
 }
