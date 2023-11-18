@@ -53,7 +53,7 @@ export class OpenAIService {
 
   generateFlashCardsText(): Observable<any> {
     const fileName = this.localStorageService.getCurrentFileName();
-    const content = this.localStorageService.getFile(fileName)!;
+    const content = this.localStorageService.getFile(fileName);
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',

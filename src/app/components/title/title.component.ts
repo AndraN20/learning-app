@@ -26,7 +26,6 @@ export class TitleComponent implements OnInit {
     this._router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentPath = this._router.url.slice(1);
-        console.log(this.currentPath);
       }
     });
   }

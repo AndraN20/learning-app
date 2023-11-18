@@ -10,7 +10,6 @@ export class FillTheBlanksComponent {
   constructor(private readonly openAIService: OpenAIService) {}
   generateText(): void {
     this.openAIService.generateText('salut').subscribe(result => {
-      console.log(result);
     });
   }
 }

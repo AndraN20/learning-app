@@ -38,6 +38,5 @@ export class FlashCardsComponent implements OnInit {
 
   revealAnswear(): void {
     this.rotated = !this.rotated;
-    console.log(this.rotated);
   }
 }
