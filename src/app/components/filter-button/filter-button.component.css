@@ -1,10 +1,17 @@
 .btn-filter {
+  position: fixed;
+  top: 95px;
   height: 60px;
   width: 350px;
-  background-color: #8000802b;
+  background-color: rgb(231, 231, 231);
   border-radius: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   justify-content: space-around;
+  z-index: 10;
+}
+.filler {
+  height: 60px;
+  width: 350px;
 }
