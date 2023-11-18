@@ -1,9 +1,13 @@
 <div class="container">
-    <app-title title="Choose a file to learn" [renderBackBtn]="false"></app-title>
-    <app-filter-button></app-filter-button>
+  <app-title
+    title="Choose a file to learn"
+    [icon]="'../../../assets/Setting_line.svg'"
+    [enableGoBack]="false"
+    [route]="paths.SETTINGS"
+  ></app-title>
+  <app-filter-button></app-filter-button>
 
-    <div class="text-file-container">
-        <app-text-file *ngFor="let item of data">
-        </app-text-file>
-    </div>
+  <div class="text-file-container">
+    <app-text-file *ngFor="let file of files" [file]="file"> </app-text-file>
+  </div>
 </div>
