@@ -13,9 +13,12 @@ import { MultipleChoiceComponent } from './pages/multiple-choice/multiple-choice
 import { QuestionComponent } from './pages/question/question.component';
 import { AddFileComponent } from './pages/add-file/add-file.component';
 import { TitleComponent } from './components/title/title.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
+import { TextFileComponent } from './components/text-file/text-file.component';
+import { FilterButtonComponent } from './components/filter-button/filter-button.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ChooseMethodCardComponent } from './components/choose-method-card/choose-method-card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
     NavbarComponent,
     AddFileComponent,
     TitleComponent,
+    FilterButtonComponent,
+    TextFileComponent,
+    ChooseMethodCardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,4 +47,4 @@ import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
   providers: [provideAngularSvgIcon()],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

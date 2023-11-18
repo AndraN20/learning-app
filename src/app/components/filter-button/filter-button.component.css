@@ -1,0 +1,10 @@
+.btn-filter {
+  height: 60px;
+  width: 350px;
+  background-color: #8000802b;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+}
