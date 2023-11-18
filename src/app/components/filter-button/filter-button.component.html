@@ -1,5 +1,10 @@
-<div class="btn-filter" (click)="changeStatus()">
-  <p>All</p>
-  <p>Solved</p>
+<div>
+  <div class="btn-filter" (click)="changeStatus()">
+    <p [ngClass]="status ? '' : 'p-active'">All</p>
+    <p [ngClass]="status ? 'p-active' : ''">Solved</p>
+  </div>
+  <div
+    class="btn-filter-switch"
+    [ngClass]="status ? 'btn-filter-switch-active' : ''"
+  ></div>
 </div>
-<div class="btn-filter-switch"></div>
