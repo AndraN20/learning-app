@@ -22,7 +22,7 @@ export class LocalStorageService {
     localStorage.setItem(file.name, JSON.stringify(file));
   }
 
-  getFiles(): TextFile[] {
+  getFiles(filter: boolean): TextFile[] {
     let fileNames: string[] = JSON.parse(localStorage.getItem('FILE_NAMES')!);
     if (!fileNames) {
       fileNames = [];
@@ -30,7 +30,13 @@ export class LocalStorageService {
     const textFiles: TextFile[] = [];
     fileNames.forEach((name) => {
       const textFile: TextFile = JSON.parse(localStorage.getItem(name)!);
-      textFiles.push(textFile);
+      if (!filter) {
+        textFiles.push(textFile);
+      } else {
+        if (textFile.accuracy) {
+          textFiles.push(textFile);
+        }
+      }
     });
     return textFiles;
   }

@@ -5,7 +5,7 @@
     [enableGoBack]="false"
     [route]="paths.SETTINGS"
   ></app-title>
-  <app-filter-button></app-filter-button>
+  <app-filter-button (switchToggled)="filterFiles()"></app-filter-button>
 
   <div class="text-file-container">
     <app-text-file *ngFor="let file of files" [file]="file"> </app-text-file>
