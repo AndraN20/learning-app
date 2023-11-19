@@ -42,7 +42,7 @@
 
 .side-nav-container {
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 100px;
   left: 50px;
 }
