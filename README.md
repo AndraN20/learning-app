@@ -2,26 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
-## Development server
+We've built this Angular project on the foundation of advanced design patterns:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Component-Based Application
+- Dependency Injection
+- Observer Pattern
+- Facade Pattern
+- Decorator Pattern
+- Model-View-ViewModel (MVVM) Architecture
 
-## Code scaffolding
+We've prioritized clarity and type safety by avoiding the 'any' type. Our reliance on services facilitates seamless connections between components, ensuring a cohesive learning experience.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Icons aren't just for show—they enhance navigation and comprehension. Forms are a breeze, thanks to Angular's robust form features, ensuring a smooth learning journey. Plus, we've optimized performance by steering clear of using functions in HTML to rerender multiple times.
