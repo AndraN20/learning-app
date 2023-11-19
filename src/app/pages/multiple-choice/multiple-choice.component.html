@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!loading">
   <app-title
     title="Choose the right answer"
     [icon]="'../../../assets/Expand_left.svg'"
@@ -34,4 +34,8 @@
       </button>
     </form>
   </div>
+</div>
+
+<div class="loading-container" *ngIf="loading">
+  <app-loading-spiner></app-loading-spiner>
 </div>

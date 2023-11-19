@@ -53,6 +53,79 @@ export class OpenAIService {
 
     return this.http.post<any>(this.apiUrl, requestBody, { headers: headers });
   }
+  generateMultipleChoiceQuestion(): Observable<any> {
+    const fileName = this.localStorageService.getCurrentFileName();
+    const content = this.localStorageService.getFile(fileName);
+
+    const prompt = `you obey all my orders. i give you a text and you return me an array of objects containing a question about the text i give you and an array of objects containing some answers to that question and a boolean .you can follow this example:[
+      {
+        question: 'Cine a scris Moara cu Noroc?',
+        answers: [
+          { sentence: 'Ioan Slavici', value: true },
+          { sentence: 'Mihai Eminescu', value: false },
+          { sentence: 'Vasile Alecsandri', value: false },
+          { sentence: 'George Bacovia', value: false },
+        ],
+      },
+      {
+        question: 'Cine a scris Moara cu Noroc?',
+        answers: [
+          { sentence: 'Ioan Slavici', value: true },
+          { sentence: 'Mihai Eminescu', value: false },
+          { sentence: 'Vasile Alecsandri', value: false },
+          { sentence: 'George Bacovia', value: false },
+        ],
+      },
+      {
+        question: 'Cine a scris Moara cu Noroc?',
+        answers: [
+          { sentence: 'Ioan Slavici', value: true },
+          { sentence: 'Mihai Eminescu', value: false },
+          { sentence: 'Vasile Alecsandri', value: false },
+          { sentence: 'George Bacovia', value: false },
+        ],
+      },
+      {
+        question: 'Cine a scris Moara cu Noroc?',
+        answers: [
+          { sentence: 'Ioan Slavici', value: true },
+          { sentence: 'Mihai Eminescu', value: false },
+          { sentence: 'Vasile Alecsandri', value: false },
+          { sentence: 'George Bacovia', value: false },
+        ],
+      },
+      {
+        question: 'Cine a scris Moara cu Noroc?',
+        answers: [
+          { sentence: 'Ioan Slavici', value: true },
+          { sentence: 'Mihai Eminescu', value: false },
+          { sentence: 'Vasile Alecsandri', value: false },
+          { sentence: 'George Bacovia', value: false },
+        ],
+      },
+      {
+        question: 'Cine a scris Moara cu Noroc?',
+        answers: [
+          { sentence: 'Ioan Slavici', value: true },
+          { sentence: 'Mihai Eminescu', value: false },
+          { sentence: 'Vasile Alecsandri', value: false },
+          { sentence: 'George Bacovia', value: false },
+        ],
+      },
+    ] but json. it should have 6 objects inside it. the question will be named question. in the objects of the array the answers will be named sentenceand will contain 4 answers  and the boolean will be named value. only one of those answers will be correct and his value will be true, the other ones will be false. you will give me this in json format and not write anything else but the json. nothing before or after the json. the text is:; ${content?.text}`;
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${this.apiKey}`,
+    });
+
+    const requestBody = {
+      model: this.modelName,
+      messages: [{ role: 'system', content: prompt }],
+    };
+
+    return this.http.post<any>(this.apiUrl, requestBody, { headers: headers });
+  }
 
   generateFlashCardsText(): Observable<any> {
     const fileName = this.localStorageService.getCurrentFileName();
