@@ -1,0 +1,23 @@
+.word{
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+.inp{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 2rem;
+    outline: none;
+}
+
+.buton{
+    bottom: 6rem;
+    left: 2.5rem;
+}
+
+.right {
+    border-color: green;
+}
+
+.wrong {
+    border-color: red;
+}

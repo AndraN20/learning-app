@@ -1,9 +1,13 @@
 <app-title title="Fill the blanks" [icon]="'../../../assets/Expand_left.svg'" [enableGoBack]="true"></app-title>
-<div *ngFor="let item of allWords;">
-    <div *ngIf="item == 'placeholder'; else normalText">
-        <input />
+<form [formGroup]="form">
+<div *ngFor="let item of wordsArray; let i = index" class="word">
+    <div *ngIf="item.startsWith('--placeholder'); else plainText;">
+       <input class="inp" [ngClass]="submitted ? (answersArray[i] ? 'right' : 'wrong') : ''" type="text" [formControlName]="'control-' + item.split('-')[3]" [id]="item.split('-')[3]">
     </div>
-    <ng-template #normalText>
-        {{ item }}
-    </ng-template>
+    <ng-template #plainText>
+        <p> {{item}} </p>
+    </ng-template> 
 </div>
+
+<button class="btn buton" (click)="onSubmit()"> Done </button>
+</form>
