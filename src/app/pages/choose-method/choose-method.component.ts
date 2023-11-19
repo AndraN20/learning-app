@@ -8,13 +8,10 @@ import { PATHS } from 'src/app/constants/paths';
 })
 export class ChooseMethodComponent {
   fill_the_blanks_title: string = 'Fill the blanks';
-  fill_the_blanks_description: string = `   Lorem _____ is simply dummy text of the printing and ________ industry. Lorem Ipsum has been the industry's standard _____ text ever since ____ 1500s.`;
-
-  reorder_title: string = 'Reorder';
-  reorder_description: string = `text`;
+  fill_the_blanks_description: string = `A learning method where key words are removed from a text, creating gaps for you to fill in.`;
 
   right_answer_title: string = 'Choose the right answer';
-  right_answer_description: string = `text`;
+  right_answer_description: string = `A learning method where questions with a single correct answer are generated from your text.`;
 
   paths = PATHS;
 }
