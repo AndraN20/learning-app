@@ -11,7 +11,7 @@ export class NavbarComponent {
   currentPath!: string;
   sideNavState: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -27,5 +27,6 @@ export class NavbarComponent {
 
   redirectToTextAdd(): void {
     this.router.navigate(['add-file']);
+    this.sideNavState = !this.sideNavState;
   }
 }
