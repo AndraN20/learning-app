@@ -12,9 +12,9 @@ import { OpenAIService } from 'src/app/services/openai.service';
 export class FillTheBlanksComponent implements OnInit {
   blankWords!: [{ word: string, index: number }];
   allContent: string = '';
-  wordsArray: any;
+  wordsArray: string[] = [];
   form!: FormGroup;
-  formControlValues: any = [];
+  formControlValues: string[] = [];
   answersArray: boolean[] = [];
   submitted = false;
   submittedCount = 0;
@@ -33,7 +33,7 @@ export class FillTheBlanksComponent implements OnInit {
       const message = result.choices[0].message.content;
       const filename = this.localStorageService.getCurrentFileName();
       const file = this.localStorageService.getFile(filename);
-      let content: any = file?.text;
+      let content: string = file?.text!;
       
       this.blankWords = JSON.parse(message);
       console.log(this.blankWords);
@@ -75,9 +75,6 @@ export class FillTheBlanksComponent implements OnInit {
     } else {
       this.router.navigate(['homepage']);
     }
-
-    // console.log(this.formControlValues);
-
   }
 
 }

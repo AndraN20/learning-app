@@ -4,3 +4,6 @@
   align-items: center;
   justify-content: center;
 }
+.filler {
+  height: 3rem;
+}
